@@ -56,6 +56,7 @@ The analysis requires the following `.dta` files placed in the data directory:
 | `enin.dta` | Central environmental inspection policy | `enin` → `CEI` |
 | `Coal.dta` | Coal-fired power plant closures | `FFP` → `Coal` |
 | `Windexp.dta` | Wind power expansion | `风电数量` → `Windexp` |
+| `highPI.dta` | Neighbor indicator for high-PI counties | `is_neighbor_of_highPI` |
 
 ### Instrumental Variable Data
 
@@ -63,7 +64,6 @@ The analysis requires the following `.dta` files placed in the data directory:
 |------|-------------|---------------|
 | `sunshine.dta` | Historical average sunshine duration (1984–2013) | `sun` |
 | `CCPU.dta` | City-level climate policy uncertainty index | `CCPU` |
-| `highPI.dta` | Neighbor indicator for high-PI counties | `is_neighbor_of_highPI` |
 
 ### Heterogeneity Variables
 
