@@ -68,6 +68,7 @@ README.md                       <- This file
 | `Coal.dta` | Coal-fired power plant closure indicator |
 | `Windexp.dta` | Wind power expansion indicator |
 | `BirdDrop3.dta` – `BirdDrop20.dta` | Bird diversity after excluding low-activity observations |
+| `highPI.dta` | Indicator for counties neighboring high-PI counties |
 
 ### Instrumental Variables
 
@@ -75,7 +76,6 @@ README.md                       <- This file
 |------|-------------|
 | `sunshine.dta` | Average sunshine duration (1984–2013) by county |
 | `CCPU.dta` | City-level Climate Policy Uncertainty (CPU) index |
-| `highPI.dta` | Indicator for counties neighboring high-PI counties |
 
 ### Heterogeneity Analysis
 
