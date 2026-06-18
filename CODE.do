@@ -291,10 +291,10 @@ reghdfe ShannonBD PI Temp Wind Pop Duration Carbon Water Green Farm Grass, absor
 estadd local year "YES"
 estadd local county "YES"
 est store s3
-esttab s1 s2 s3 using baseline.rtf, replace title("Table 1. Solar policy stringency significantly reduces bird diversity.") ///
+esttab s1 s2 s3 using baseline.rtf, replace title("Table 1. Solar policy intensity significantly reduces bird diversity.") ///
 	stats(year county N r2_a, labels("Year-month FE" "County FE" "Observations" "R-squared") fmt(0 0 0 4)) ///
 	star(* 0.10 ** 0.05 *** 0.01) nonotes nocons b(4) se compress nogaps /// 
-	note("Notes: This table presents the association between the bird diversity and stringency of photovoltaic policies for a sample of 2,344 counties from 2014 to 2023. The dependent variable is ShannonBD (the negative sum of the proportion of each bird species multiplied by its natural logarithm). The independent variable is PSI (the weighted sum of policies at the provincial, municipal, and county levels). Other control variables include Temp (annual average temperature), Wind (annual average wind speed), Pop (the logarithm of the ratio of total population to regional area), Duration (the logarithm of the ratio of birdwatching duration to the number of birdwatchers), Carbon (the logarithm of the carbon emissions), Water (the area of water divided by the total area), Green (the sum of the area of forests and shrubs divided by the total area), Farm (the area of farmland divided by the total area), Grass (the area of the grassland divided by the total area). All specifications include county and Year-month fixed effects. The robust standard errors clustered by the county are reported in parenthesis. ***, **, * denote the significance at the 1%, 5%, and 10% levels, respectively.")
+	note("Notes: This table presents the association between the bird diversity and intensity of photovoltaic policies for a sample of 2,344 counties from 2014 to 2023. The dependent variable is ShannonBD (the negative sum of the proportion of each bird species multiplied by its natural logarithm). The independent variable is PSI (the weighted sum of policies at the provincial, municipal, and county levels). Other control variables include Temp (annual average temperature), Wind (annual average wind speed), Pop (the logarithm of the ratio of total population to regional area), Duration (the logarithm of the ratio of birdwatching duration to the number of birdwatchers), Carbon (the logarithm of the carbon emissions), Water (the area of water divided by the total area), Green (the sum of the area of forests and shrubs divided by the total area), Farm (the area of farmland divided by the total area), Grass (the area of the grassland divided by the total area). All specifications include county and Year-month fixed effects. The robust standard errors clustered by the county are reported in parenthesis. ***, **, * denote the significance at the 1%, 5%, and 10% levels, respectively.")
 restore
 
 
@@ -552,7 +552,7 @@ esttab s1 s2 s3 s4 s5 s6 s7 s8 using robust_alternative_var.rtf, replace title("
 	stats(year county N r2_a, labels("Year-month FE" "County FE" "Observations" "R-squared") fmt(0 0 0 4)) ///
 	star(* 0.10 ** 0.05 *** 0.01) nonotes nocons b(4) se compress nogaps ///
 	order(Area PI1 PI2 PI3 PI4 PI5 PI6 PI) ///
-	note("Notes: This table presents the regression results with alternative measures of key variables. The dependent variable in Columns (1)-(7) is ShannonBD (the negative sum of the proportion of each bird species multiplied by its natural logarithm). In Column (1), the core explanatory variable is replaced with Area (the area of centralized photovoltaic power stations). Column (2) replaces it with policy stringency calculated using arithmetic progression scores of 1, 2, and 3 with hierarchical weights of 0.5, 0.3, and 0.2. Column (3) replaces it with geometric progression scores of 1, 2, and 4 with hierarchical weights of 0.5, 0.3, and 0.2. Column (4) replaces it with exponential progression scores of 2, 4, and 8 with hierarchical weights of 0.5, 0.3, and 0.2. Column (5) replaces it with arithmetic progression scores of 1, 2, and 3 with equal weights of 1. Column (6) replaces it with geometric progression scores of 1, 2, and 4 with equal weights of 1. Column (7) replaces it with exponential progression scores of 2, 4, and 8 with equal weights of 1. The dependent variable in Columns (8) is SimpsonBD (one minus the sum of the squared proportions of each bird species in the community). The independent variable in Column (8) is PSI (the weighted sum of policies at the provincial, municipal, and county levels). Other control variables include Temp (annual average temperature), Wind (annual average wind speed), Pop (the logarithm of the ratio of total population to regional area), Duration (the logarithm of the ratio of birdwatching duration to the number of birdwatchers), Carbon (the logarithm of the carbon emissions), Water (the area of water divided by the total area), Green (the sum of the area of forests and shrubs divided by the total area), Farm (the area of farmland divided by the total area), Grass (the area of the grassland divided by the total area). All specifications include county and Year-month fixed effects. The robust standard errors clustered by the county are reported in parenthesis. ***, **, * denote the significance at the 1%, 5%, and 10% levels, respectively.")
+	note("Notes: This table presents the regression results with alternative measures of key variables. The dependent variable in Columns (1)-(7) is ShannonBD (the negative sum of the proportion of each bird species multiplied by its natural logarithm). In Column (1), the core explanatory variable is replaced with Area (the area of centralized photovoltaic power stations). Column (2) replaces it with policy intensity calculated using arithmetic progression scores of 1, 2, and 3 with hierarchical weights of 0.5, 0.3, and 0.2. Column (3) replaces it with geometric progression scores of 1, 2, and 4 with hierarchical weights of 0.5, 0.3, and 0.2. Column (4) replaces it with exponential progression scores of 2, 4, and 8 with hierarchical weights of 0.5, 0.3, and 0.2. Column (5) replaces it with arithmetic progression scores of 1, 2, and 3 with equal weights of 1. Column (6) replaces it with geometric progression scores of 1, 2, and 4 with equal weights of 1. Column (7) replaces it with exponential progression scores of 2, 4, and 8 with equal weights of 1. The dependent variable in Columns (8) is SimpsonBD (one minus the sum of the squared proportions of each bird species in the community). The independent variable in Column (8) is PSI (the weighted sum of policies at the provincial, municipal, and county levels). Other control variables include Temp (annual average temperature), Wind (annual average wind speed), Pop (the logarithm of the ratio of total population to regional area), Duration (the logarithm of the ratio of birdwatching duration to the number of birdwatchers), Carbon (the logarithm of the carbon emissions), Water (the area of water divided by the total area), Green (the sum of the area of forests and shrubs divided by the total area), Farm (the area of farmland divided by the total area), Grass (the area of the grassland divided by the total area). All specifications include county and Year-month fixed effects. The robust standard errors clustered by the county are reported in parenthesis. ***, **, * denote the significance at the 1%, 5%, and 10% levels, respectively.")
 restore
 
 
@@ -615,7 +615,7 @@ estadd local year "YES"
 estadd local county "YES"
 est store s4
 
-esttab s1 s2 s3 s4 using robust_exclude.rtf, replace title("Table S14. Excluding county-month observations below minimum birdwatching record thresholds.") ///
+esttab s1 s2 s3 s4 using robust_other2.rtf, replace title("Table S14. Excluding county-year observations below minimum birdwatching record thresholds.") ///
 	mtitles("Trim bottom 20%" "Trim bottom 10%" "Trim bottom 5%" "Trim bottom 3%") ///
 	stats(year county N r2_a, labels("Year-month FE" "County FE" "Observations" "R-squared") fmt(0 0 0 4)) ///
 	star(* 0.10 ** 0.05 *** 0.01) nonotes nocons b(4) se compress nogaps ///
@@ -920,7 +920,7 @@ restore
 
 
 *------------------------------------------------------------------------
-* PV-Area 
+* PV-Area/IV
 *------------------------------------------------------------------------
 preserve
 reghdfe ShannonBD PI Temp Wind Pop Duration Carbon Water Green Farm Grass, absorb(county year) cluster(county)
@@ -932,18 +932,17 @@ foreach v of varlist ShannonBD PI Area Temp Wind Pop Duration Carbon Water Green
 }
 duplicates drop id YEAR, force
 keep 省 市 县 id county YEAR ShannonBD PI Area Temp Wind Pop Duration Carbon Water Green Farm Grass Sun_ccpu
-save "baseline.dta",replace
+save "/Users/zhangaixin/Library/CloudStorage/OneDrive-个人/BD/DATA/baseline.dta",replace
 restore
 
-use "baseline.dta",clear
-*PI与Area
+use "/Users/zhangaixin/Library/CloudStorage/OneDrive-个人/BD/DATA/baseline.dta",clear
+**PI与Area
 preserve
 binscatter Area PI, controls(Temp Wind Pop Duration Carbon Water Green Farm Grass) nquantiles(50) line(lfit) xtitle("PV policy stringency") ytitle("PV area (km²)") 
-graph export FigS2.pdf, replace
+graph export "FIGS1.pdf", replace
+reg Area PI Temp Wind Pop Duration Carbon Water Green Farm Grass
 restore
-
-pwcorr PI Area,sig 
-**滞后滞前阶数
+***滞后滞前阶数
 preserve
 keep id YEAR PI Area
 duplicates drop id YEAR, force
@@ -963,7 +962,14 @@ drop _merge
 pwcorr PI Area_l1,sig
 pwcorr PI Area_l2,sig
 pwcorr PI Area_l3,sig
+pwcorr PI Area,sig 
 pwcorr PI Area_f1,sig
 pwcorr PI Area_f2,sig
 pwcorr PI Area_f3,sig
 
+**PI与IV
+preserve
+binscatter PI Sun_ccpu, controls(Temp Wind Pop Duration Carbon Water Green Farm Grass) nquantiles(50) line(lfit) xtitle("Ln Sunshine duration / City-level climate policy uncertainty") ytitle("PV policy stringency")
+graph export FIGS2.pdf, replace
+reg PI Sun_ccpu Temp Wind Pop Duration Carbon Water Green Farm Grass
+restore
